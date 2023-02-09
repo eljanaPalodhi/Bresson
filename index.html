@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henri Cartier-Bresson</title>
+    <style>
+      body {
+        background: linear-gradient(
+          68.6deg,
+          rgb(95, 93, 93) 1.2%,
+          rgb(255, 255, 255) 100.5%
+        );
+        font-family: "Times New Roman", Times, serif;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        background: #d1cdc9;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      a {
+        font-size: 20px;
+        color: black;
+      }
+      a:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      footer {
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+      }
+      .black {
+        background: linear-gradient(
+          112.1deg,
+          rgb(0, 0, 0) 11.4%,
+          rgb(77, 77, 85) 70.2%
+        );
+        color: white;
+      }
+
+      .black .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .black a {
+        color: #d1cdc9;
+      }
+      .image-gallery {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .image-gallery img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .image-gallery img:hover {
+        transform: scale(2);
+      }
+      .image-gallery img {
+        width: 100%;
+        border-radius: 1px black solid;
+        border: 10px;
+      }
+      .brussels {
+        width: 100%;
+        transition: transform 250ms ease-in-out;
+      }
+      .brussels:hover {
+        transform: scale(1.2);
+      }
+
+      button {
+        background: black;
+        color: white;
+        display: block;
+        border: 1px solid black;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        color: black;
+        background: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Dark Theme</button>
+    <div class="container">
+      <h1>Henri Cartier-Bresson</h1>
+      <img class="brussels" src="img/brussels.jpg" alt="brussels" />
+      <h2>The Master of Black-and-White Photography</h2>
+      <p>
+        As a pioneer of modern photojournalism and co-founder of the Magnum
+        Agency, Henri Cartier-Bresson is without doubt one of the greatest
+        photographers of all time and has known since the 1930’s how to
+        consistently set new standards.
+      </p>
+      <div class="image-gallery">
+        <img src="img/paris.jpg" alt="paris" />
+        <img src="img/stares.jpg" alt="stares" />
+        <img src="img/women.jpg" alt="women" />
+      </div>
+
+      <a
+        href="https://de.wikipedia.org/wiki/Henri_Cartier-Bresson"
+        target="_blank"
+        >Learn more on wikipedia</a
+      >
+    </div>
+    <footer>Coded by Eljana Palodhi</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("black")) {
+          body.classList.remove("black");
+        } else {
+          body.classList.add("black");
+        }
+      }
+
+      let themeButton = document.querySelector("button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
